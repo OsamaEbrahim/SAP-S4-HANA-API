@@ -25,8 +25,9 @@ namespace SAP_S4_Hana_API.Controllers
                 IRfcTable idRange = getCustomerList.GetTable("IDRANGE");
                 idRange.Append();
                 idRange.SetValue("SIGN", "I");
-                idRange.SetValue("OPTION", "CP");
-                idRange.SetValue("LOW", "A*");
+                idRange.SetValue("OPTION", "BT");
+                idRange.SetValue("LOW", "");
+                idRange.SetValue("HIGH", "");
 
                 getCustomerList.Invoke(sapConnection);
                 // Check the return type of the BAPIRETURN structure
